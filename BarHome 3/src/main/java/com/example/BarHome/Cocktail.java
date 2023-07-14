@@ -1,14 +1,13 @@
-package com.example.BarHome.Models;
+package com.example.BarHome;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import org.hibernate.annotations.Cascade;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name="cocktail")
+@Table(name="cocktails")
 public class Cocktail {
 
     @Id
@@ -16,15 +15,18 @@ public class Cocktail {
     @Column(name="id")
     private Long id;
 
+    @Column(name="image")
+    private String image;
+
     @Column(name="name")
     private String name;
 
     @Column(name="type")
     private String type;
 
-    @JsonBackReference
+
     @ManyToMany
-    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
+    @JsonIgnoreProperties({"cocktail"})
     @JoinTable(
             name="cocktails_ingredients",
             joinColumns = {@JoinColumn(
@@ -46,12 +48,17 @@ public class Cocktail {
     @Column(name="saved")
     private boolean saved;
 
-    public Cocktail(String name, String type, String method, boolean saved) {
+    public Cocktail(String image, String name, String type, String method, boolean saved) {
+        this.image = image;
         this.name = name;
         this.type = type;
         this.ingredients = new ArrayList<Ingredient>();
         this.method = method;
         this.saved = saved;
+    }
+
+    public Cocktail(){
+
     }
 
     public Long getId() {
@@ -60,6 +67,14 @@ public class Cocktail {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public String getName() {

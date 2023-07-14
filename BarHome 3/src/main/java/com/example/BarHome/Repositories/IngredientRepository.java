@@ -1,6 +1,6 @@
 package com.example.BarHome.Repositories;
 
-import com.example.BarHome.Models.Ingredient;
+import com.example.BarHome.Ingredient;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

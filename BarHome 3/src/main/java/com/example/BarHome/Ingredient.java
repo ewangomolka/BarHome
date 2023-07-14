@@ -1,6 +1,7 @@
-package com.example.BarHome.Models;
+package com.example.BarHome;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -21,8 +22,9 @@ public class Ingredient {
     @Column(name="quantity")
     private String quantity;
 
+    @JsonBackReference
     @ManyToMany
-    @JsonIgnoreProperties({"cocktail"})
+    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
     @JoinTable(
             name="cocktails_ingredients",
             joinColumns = {@JoinColumn(
@@ -42,6 +44,10 @@ public class Ingredient {
         this.name = name;
         this.quantity = quantity;
         this.cocktails = new ArrayList<Cocktail>();
+    }
+
+    public Ingredient(){
+
     }
 
     public Long getId() {
