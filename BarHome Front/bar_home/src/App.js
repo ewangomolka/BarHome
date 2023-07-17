@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import MainContainer from './containers/MainContainer';
 
 function App() {
   return (
-    <Router>
       <div className="App">
         <div>
         {/* header */}
@@ -16,7 +16,6 @@ function App() {
           {/* footer */}
         </div>
       </div>
-    </Router>
   );
 }
 
