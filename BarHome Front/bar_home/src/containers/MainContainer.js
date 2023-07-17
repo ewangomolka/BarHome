@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import CocktailList from '../components/CocktailList';
 import SavedCocktails from '../components/SavedCocktails';
+import NavBar from '../components/NavBar';
 import Request from '../helpers/request';
 import Home from '../components/Home';
 import Info from '../components/Info';
@@ -24,9 +25,6 @@ const MainContainer = () => {
         })
     }
 
-    console.log("cocktails", cocktails);
-    console.log("ingredients", ingredients);
-
     const getIngredients = () => {
         const request = new Request()
         request.get("/api/ingredient")
@@ -38,6 +36,7 @@ const MainContainer = () => {
     return ( 
         <div>
             <Router>
+            <NavBar/>
                 <Routes>
                     <Route path="/" element={<Home/>}/>
                     <Route path="/cocktails" element={<CocktailList cocktails={cocktails} ingredients={ingredients}/>}/>

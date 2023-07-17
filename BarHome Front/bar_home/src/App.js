@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import MainContainer from './containers/MainContainer';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
           <MainContainer/>
         </div>
         <div>
-          {/* footer */}
+          <Footer/>
         </div>
       </div>
   );
