@@ -5,7 +5,8 @@ import NavBar from '../components/NavBar';
 import Request from '../helpers/request';
 import Home from '../components/Home';
 import Info from '../components/Info';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route, useParams} from 'react-router-dom';
+import CocktailDetail from '../components/CocktailDetail';
 
 const MainContainer = () => {
 
@@ -33,13 +34,30 @@ const MainContainer = () => {
         })
     }
 
+    const findCocktailById = (id) => {
+        let foundCocktail = null
+        for (let cocktail of cocktails){
+            if (cocktail.id === parseInt(id)){
+                foundCocktail = cocktail
+            }
+        }
+        return foundCocktail
+    }
+
+    const CocktailWrapper = () => {
+        const {id} = useParams()
+        let foundCocktail = findCocktailById(id)
+        return <CocktailDetail cocktail={foundCocktail}/>
+    }
+
     return ( 
         <div>
             <Router>
             <NavBar/>
                 <Routes>
                     <Route path="/" element={<Home/>}/>
-                    <Route path="/cocktails" element={<CocktailList cocktails={cocktails} ingredients={ingredients}/>}/>
+                    <Route path="/cocktail/:id" element={<CocktailWrapper/>}/>
+                    <Route path="/cocktails" element={<CocktailList cocktails={cocktails} ingredients={ingredients} findCocktailById={findCocktailById}/>}/>
                     <Route path="/saved" element={<SavedCocktails cocktails={cocktails}/>}/>
                     <Route path="/info" element={<Info/>}/>
                 </Routes>

@@ -1,0 +1,37 @@
+.cocktail-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(1, 22, 56);
+    border-radius: 20px;
+    width: 500px;
+    color: rgb(1, 22, 56);
+    background-color: rgb(255, 255, 255, 0.5);
+}
+
+.cocktail-spacing > a {
+    text-decoration: none;
+}
+
+.cocktail-spacing {
+    padding: 20px;
+}
+
+.cocktail-list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media (min-width: 390px) {
+    .cocktail-card {
+        width: 350px;
+    }
+}
+
+@media (max-width: 820px) {
+    .cocktail-card {
+        width: 300px;
+    }
+}
+
