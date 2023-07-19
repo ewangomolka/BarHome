@@ -1,0 +1,8 @@
+.footer {
+    background-color: rgb(255, 255, 255, 0.5);
+}
+
+.footer-img {
+    mix-blend-mode: multiply;
+    height: 125px;
+}

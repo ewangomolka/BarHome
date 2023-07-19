@@ -1,0 +1,18 @@
+.body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 1px;
+    background-color: rgb(255, 255, 255, 0.5);
+}
+
+.body > h1 {
+    font-family: Mr Dafoe;
+    font-size: 40px;
+}
+
+.header-img {
+    padding-top: 11px;
+    height: 80px;
+    width: 150px;
+}
