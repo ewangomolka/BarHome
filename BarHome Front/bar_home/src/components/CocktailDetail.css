@@ -1,0 +1,72 @@
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.cocktail-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 35%;
+    border: 5px solid #ccc;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255, 0.5);
+}
+
+.image {
+    height: 400px;
+    width: 350px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+}
+
+.cocktail-ingredients {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255, 0.5);
+    width: 348px;
+}
+
+.cocktail-ingredients > ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 5px;
+}
+
+.cocktail-ingredients > ul > li {
+    display: flex;
+    padding: 5px;
+    justify-content: space-evenly;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cocktail-method {
+    border: 2px solid #ccc;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255, 0.5);
+    width: 75%;
+}
+
+div > button {
+    width: 200px;
+    height: 50px;
+    background-color: rgb(142, 227, 245);
+    border-radius: 7px;
+    border-color: #ccc;
+}
+
+.buttons {
+    padding: 10px;
+}
