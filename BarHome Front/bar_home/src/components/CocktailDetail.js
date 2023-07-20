@@ -20,11 +20,11 @@ const CocktailDetail = ({cocktail}) => {
     return ( 
         <div className='page-container'>
             <div className='cocktail-container'>
-                <div>
+                <div className='cocktail-title'>
                     <p>{cocktail.name}</p>
+                </div>
                     <p>{cocktail.type}</p>
                     <img className='image' src={cocktail.image}/>
-                </div>
                 <div className='buttons'>
                     {showIngredients ? <button onClick={handleIngredients}>Method</button> : 
                     <button onClick={handleIngredients}>Ingredients</button>}

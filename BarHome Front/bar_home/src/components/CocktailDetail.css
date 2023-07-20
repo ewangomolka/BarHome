@@ -15,6 +15,7 @@
     border: 5px solid #ccc;
     border-radius: 20px;
     background-color: rgb(255, 255, 255, 0.5);
+    box-shadow: 5px 5px 5px;
 }
 
 .image {
@@ -22,6 +23,7 @@
     width: 350px;
     border: 2px solid #ccc;
     border-radius: 20px;
+    box-shadow: 5px 5px 5px;
 }
 
 .cocktail-ingredients {
@@ -29,6 +31,7 @@
     border-radius: 10px;
     background-color: rgb(255, 255, 255, 0.5);
     width: 348px;
+    box-shadow: 5px 5px 5px;
 }
 
 .cocktail-ingredients > ul {
@@ -57,6 +60,7 @@
     border-radius: 10px;
     background-color: rgb(255, 255, 255, 0.5);
     width: 75%;
+    box-shadow: 5px 5px 5px;
 }
 
 div > button {
@@ -65,8 +69,19 @@ div > button {
     background-color: rgb(142, 227, 245);
     border-radius: 7px;
     border-color: #ccc;
+    box-shadow: 2px 2px 2px;
+    font-family: Playfair Display SC;
 }
 
 .buttons {
     padding: 10px;
+}
+
+.cocktail-title {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding-left: 135px;
+    padding-right: 135px;
+    background-color: rgb(255, 255, 255, 0.5);
+    box-shadow: 5px 5px 5px;
 }

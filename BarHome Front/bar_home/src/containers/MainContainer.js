@@ -7,6 +7,7 @@ import Home from '../components/Home';
 import Info from '../components/Info';
 import {BrowserRouter as Router, Routes, Route, useParams} from 'react-router-dom';
 import CocktailDetail from '../components/CocktailDetail';
+import './MainContainer.css';
 
 const MainContainer = () => {
 
@@ -51,7 +52,7 @@ const MainContainer = () => {
     }
 
     return ( 
-        <div>
+        <div className='main-body'>
             <Router>
             <NavBar/>
                 <Routes>

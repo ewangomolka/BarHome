@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import CocktailCard from './CocktailCard';
 import './CocktailCard.css'
+import SearchBar from './SearchBar';
 
 const CocktailList = ({cocktails}) => {
 
@@ -21,9 +22,16 @@ const CocktailList = ({cocktails}) => {
     })
 
     return ( 
-        <ul className='cocktail-list'>
-            {cocktailElements}
-        </ul>
+        <div>
+            <div>
+                <SearchBar/>
+            </div>
+            <div>
+                <ul className='cocktail-list'>
+                    {cocktailElements}
+                </ul>
+            </div>
+        </div>
      );
 }
  

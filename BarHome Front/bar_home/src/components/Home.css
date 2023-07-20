@@ -12,7 +12,11 @@
 }
 
 .logo {
-    width: 700px;
+    width: 665px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255, 0.5);
+    box-shadow: 5px 5px 10px;
 }
 
 .detail {
@@ -20,4 +24,5 @@
     border-radius: 20px;
     padding: 60px;
     background-color: rgb(255, 255, 255, 0.5);
+    box-shadow: 5px 5px 10px;
 }

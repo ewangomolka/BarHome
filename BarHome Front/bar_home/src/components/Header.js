@@ -8,8 +8,7 @@ const Header = () => {
 
     return ( 
         <div className='body'>
-            <h1>BarHome!</h1>
-            {/* <img className='header-img' src={logo}/> */}
+            <h1>Bar Home!</h1>
         </div>
      );
 }
